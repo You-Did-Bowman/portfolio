@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- VARIABLES ----- */
+
+$black: #000000;
+$grey: #1a1919;
+$white: #f0f0ee;
+$gold: #deb975;
+$brown: #201f1e;
+
+/* ----- PLACEHOLDERS ----- */
+
+%tarotStyle {
+  background-size: cover;
+  text-decoration: none;
+  width: 250px;
+  height: 400px;
+}
+
+%overlayStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  top: 150px;
+  left: 75px;
+
+  background-color: #ffffffe0;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  transform: rotate(45deg);
+
+  p {
+    transform: rotate(-45deg);
+    color: $black;
+    font-size: 1.5rem;
+  }
+}
+
+/* ----- KEYFRAMES ----- */
+
+/* ----- GENERAL STYLES ----- */
+
+body {
+  background: $black;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    margin: 7rem 0;
+    .star {
+      background-image: url(../images/tarot_the-star.jpg);
+      @extend %tarotStyle;
+      position: relative;
+
+      .container {
+        @extend %overlayStyle;
+        transition: all .7s linear;
+      }
+
+      &:hover {
+        .container {
+          opacity: 0;
+        }
+      }
+    }
+
+    .rings {
+      background-image: url(../images/tarot_eight-of-rings.jpg);
+      @extend %tarotStyle;
+
+      .container {
+        @extend %overlayStyle;
+        transition: all .7s linear;
+      }
+
+      &:hover {
+        .container {
+          opacity: 0;
+        }
+      }
+    }
+
+    .wands {
+      background-image: url(../images/tarot_five-of-wands.jpg);
+      @extend %tarotStyle;
+
+      .container {
+        @extend %overlayStyle;
+        transition: all .7s linear;
+      }
+
+        &:hover {
+          .container {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    background: #1a1919;
+    height: 6rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+/* ----- MEDIA QUIERIES ----- */

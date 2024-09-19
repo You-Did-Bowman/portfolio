@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- VARIABLES ----- */
+/* ----- PLACEHOLDERS ----- */
+body .wrapper .wands, body .wrapper .rings, body .wrapper .star {
+  background-size: cover;
+  text-decoration: none;
+  width: 250px;
+  height: 400px;
+}
+
+body .wrapper .wands .container, body .wrapper .rings .container, body .wrapper .star .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 150px;
+  left: 75px;
+  background-color: rgba(255, 255, 255, 0.8784313725);
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  transform: rotate(45deg);
+}
+body .wrapper .wands .container p, body .wrapper .rings .container p, body .wrapper .star .container p {
+  transform: rotate(-45deg);
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+/* ----- KEYFRAMES ----- */
+/* ----- GENERAL STYLES ----- */
+body {
+  background: #000000;
+}
+body .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin: 7rem 0;
+}
+body .wrapper .star {
+  background-image: url(../images/tarot_the-star.jpg);
+  position: relative;
+}
+body .wrapper .star .container {
+  transition: all 0.7s linear;
+}
+body .wrapper .star:hover .container {
+  opacity: 0;
+}
+body .wrapper .rings {
+  background-image: url(../images/tarot_eight-of-rings.jpg);
+}
+body .wrapper .rings .container {
+  transition: all 0.7s linear;
+}
+body .wrapper .rings:hover .container {
+  opacity: 0;
+}
+body .wrapper .wands {
+  background-image: url(../images/tarot_five-of-wands.jpg);
+}
+body .wrapper .wands .container {
+  transition: all 0.7s linear;
+}
+body .wrapper .wands:hover .container {
+  opacity: 0;
+}
+
+footer {
+  background: #1a1919;
+  height: 6rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* ----- MEDIA QUIERIES ----- *//*# sourceMappingURL=main.css.map */
