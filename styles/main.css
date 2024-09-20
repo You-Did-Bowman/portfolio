@@ -11,6 +11,7 @@ body .wrapper .wands, body .wrapper .rings, body .wrapper .star {
   text-decoration: none;
   width: 250px;
   height: 400px;
+  box-shadow: 0 0 30px 10px #111111;
 }
 
 body .wrapper .wands .container, body .wrapper .rings .container, body .wrapper .star .container {
@@ -36,7 +37,8 @@ body .wrapper .wands .container p, body .wrapper .rings .container p, body .wrap
 /* ----- GENERAL STYLES ----- */
 body {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6980392157), black), url(../images/BG-planks.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
 }
 body .wrapper {
   display: flex;
@@ -83,6 +85,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 4rem;
+}
+footer a:link {
+  color: white;
+}
+footer a:visited {
+  color: #504f4f;
 }
 
 /* ----- MEDIA QUIERIES ----- *//*# sourceMappingURL=main.css.map */

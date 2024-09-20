@@ -12,6 +12,8 @@ $white: #f0f0ee;
 $gold: #deb975;
 $brown: #201f1e;
 
+$genericBoxShadow: 0 0 30px 10px #111111;
+
 /* ----- PLACEHOLDERS ----- */
 
 %tarotStyle {
@@ -19,6 +21,7 @@ $brown: #201f1e;
   text-decoration: none;
   width: 250px;
   height: 400px;
+  box-shadow: $genericBoxShadow;
 }
 
 %overlayStyle {
@@ -48,8 +51,10 @@ $brown: #201f1e;
 /* ----- GENERAL STYLES ----- */
 
 body {
-  background-image: linear-gradient(transparent, #000000b2, black), url(../images/BG-planks.jpg);
-  background-size: contain;
+  background-image: linear-gradient(transparent, #000000b2, black),
+    url(../images/BG-planks.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 
   .wrapper {
     display: flex;
@@ -66,7 +71,7 @@ body {
 
       .container {
         @extend %overlayStyle;
-        transition: all .7s linear;
+        transition: all 0.7s linear;
       }
 
       &:hover {
@@ -82,7 +87,7 @@ body {
 
       .container {
         @extend %overlayStyle;
-        transition: all .7s linear;
+        transition: all 0.7s linear;
       }
 
       &:hover {
@@ -95,29 +100,37 @@ body {
     .wands {
       background-image: url(../images/tarot_five-of-wands.jpg);
       @extend %tarotStyle;
-      
+
       .container {
         @extend %overlayStyle;
-        transition: all .7s linear;
+        transition: all 0.7s linear;
       }
 
-        &:hover {
-          .container {
-            opacity: 0;
-          }
+      &:hover {
+        .container {
+          opacity: 0;
         }
       }
     }
   }
+}
 
-  footer {
-    background: #1a1919;
-    height: 3rem;
-    color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
+footer {
+  background: #1a1919;
+  height: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  a:link {
+    color: white;
   }
+
+  a:visited {
+    color:#504f4f;
+  }
+}
 
 /* ----- MEDIA QUIERIES ----- */
