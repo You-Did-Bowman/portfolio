@@ -48,7 +48,8 @@ $brown: #201f1e;
 /* ----- GENERAL STYLES ----- */
 
 body {
-  background: $black;
+  background-image: linear-gradient(transparent, #000000b2, black), url(../images/BG-planks.jpg);
+  background-size: contain;
 
   .wrapper {
     display: flex;
@@ -94,7 +95,7 @@ body {
     .wands {
       background-image: url(../images/tarot_five-of-wands.jpg);
       @extend %tarotStyle;
-
+      
       .container {
         @extend %overlayStyle;
         transition: all .7s linear;
@@ -111,7 +112,7 @@ body {
 
   footer {
     background: #1a1919;
-    height: 6rem;
+    height: 3rem;
     color:white;
     display: flex;
     justify-content: center;
