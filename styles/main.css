@@ -35,7 +35,8 @@ body .wrapper .wands .container p, body .wrapper .rings .container p, body .wrap
 /* ----- KEYFRAMES ----- */
 /* ----- GENERAL STYLES ----- */
 body {
-  background: #000000;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6980392157), black), url(../images/BG-planks.jpg);
+  background-size: contain;
 }
 body .wrapper {
   display: flex;
