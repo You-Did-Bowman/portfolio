@@ -4,9 +4,8 @@
   box-sizing: border-box;
 }
 
-/* ----- VARIABLES ----- */
-/* ----- PLACEHOLDERS ----- */
-body .wrapper .wands, body .wrapper .rings, body .wrapper .star {
+/* ----- IMPORTS ----- */
+.body_wrapper .wands, .body_wrapper .rings, .body_wrapper .star {
   background-size: cover;
   text-decoration: none;
   width: 250px;
@@ -14,7 +13,7 @@ body .wrapper .wands, body .wrapper .rings, body .wrapper .star {
   box-shadow: 0 0 30px 10px #111111;
 }
 
-body .wrapper .wands .container, body .wrapper .rings .container, body .wrapper .star .container {
+.body_wrapper .wands .container, .body_wrapper .rings .container, .body_wrapper .star .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,20 +26,30 @@ body .wrapper .wands .container, body .wrapper .rings .container, body .wrapper 
   border-radius: 20px;
   transform: rotate(45deg);
 }
-body .wrapper .wands .container p, body .wrapper .rings .container p, body .wrapper .star .container p {
+.body_wrapper .wands .container p, .body_wrapper .rings .container p, .body_wrapper .star .container p {
   transform: rotate(-45deg);
   color: #000000;
   font-size: 1.5rem;
 }
 
-/* ----- KEYFRAMES ----- */
-/* ----- GENERAL STYLES ----- */
 body {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6980392157), black), url(../images/BG-planks.jpg);
   background-size: cover;
   background-attachment: fixed;
+  color: white;
 }
-body .wrapper {
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: #1a1919;
+  height: 3rem;
+}
+
+/* ----- GENERAL STYLES ----- */
+.body_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,49 +57,33 @@ body .wrapper {
   gap: 4rem;
   margin: 7rem 0;
 }
-body .wrapper .star {
+.body_wrapper .star {
   background-image: url(../images/tarot_the-star.jpg);
   position: relative;
 }
-body .wrapper .star .container {
+.body_wrapper .star .container {
   transition: all 0.7s linear;
 }
-body .wrapper .star:hover .container {
+.body_wrapper .star:hover .container {
   opacity: 0;
 }
-body .wrapper .rings {
+.body_wrapper .rings {
   background-image: url(../images/tarot_eight-of-rings.jpg);
 }
-body .wrapper .rings .container {
+.body_wrapper .rings .container {
   transition: all 0.7s linear;
 }
-body .wrapper .rings:hover .container {
+.body_wrapper .rings:hover .container {
   opacity: 0;
 }
-body .wrapper .wands {
+.body_wrapper .wands {
   background-image: url(../images/tarot_five-of-wands.jpg);
 }
-body .wrapper .wands .container {
+.body_wrapper .wands .container {
   transition: all 0.7s linear;
 }
-body .wrapper .wands:hover .container {
+.body_wrapper .wands:hover .container {
   opacity: 0;
-}
-
-footer {
-  background: #1a1919;
-  height: 3rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-}
-footer a:link {
-  color: white;
-}
-footer a:visited {
-  color: #504f4f;
 }
 
 /* ----- MEDIA QUIERIES ----- *//*# sourceMappingURL=main.css.map */
