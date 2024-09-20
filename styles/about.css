@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- IMPORTS ----- */
+body {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6980392157), black), url(../images/BG-planks.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: #1a1919;
+  height: 3rem;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #504f4f;
+}
+
+/* ----- GENERAL STYLE ----- */
+header {
+  background: #1a1919;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.wrapper {
+  margin: 6rem 2rem;
+}
+.wrapper h1 {
+  text-align: center;
+}
+.wrapper .container, .wrapper .box1, .wrapper .box2 {
+  margin: 2rem 0;
+}
+
+.moon_ul {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  list-style-type: none;
+  gap: 1rem;
+}
+.moon_ul .fa-moon {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=about.css.map */

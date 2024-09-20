@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- IMPORTS ----- */
+@import "variables";
+@import "placeholders";
+@import "body";
+@import "footer";
+@import "links";
+
+/* ----- GENERAL STYLE ----- */
+
+header {
+  background: #1a1919;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:0;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.wrapper {
+    margin: 6rem 2rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    .container, .box1, .box2 {
+        margin: 2rem 0;
+    }
+}
+
+.moon_ul {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  list-style-type: none;
+  gap: 1rem;
+
+  .fa-moon {
+    font-size: 1.5rem;
+  }
+}
+
