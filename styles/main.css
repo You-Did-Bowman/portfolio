@@ -5,6 +5,8 @@
 }
 
 /* ----- IMPORTS ----- */
+/* Fontsa */
+/* Colors */
 .body_wrapper .wands, .body_wrapper .rings, .body_wrapper .star {
   background-size: cover;
   text-decoration: none;
@@ -33,11 +35,61 @@
   font-size: 1.5rem;
 }
 
+.book1,
+.book2,
+.book3,
+.book4 {
+  background-image: url(../images/book.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 4rem 0;
+  width: 350px;
+  height: 250px;
+}
+
+@keyframes backgroundIMG {
+  100% {
+    background-image: url(../images/illustrations_all.jpg);
+  }
+}
+@keyframes wiggle {
+  0%, 10%, 100% {
+    transform: translateX(0);
+  }
+  1%, 3%, 5%, 7%, 9% {
+    transform: translateX(-10px) rotate(15deg);
+  }
+  2%, 4%, 6%, 8% {
+    transform: translateX(10px) rotate(-15deg);
+  }
+}
+header {
+  background: #1a1919;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4666666667), black), url(../images/BG-planks.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  font-family: "Alice", system-ui;
 }
 
 footer {
@@ -49,20 +101,33 @@ footer {
   height: 3rem;
 }
 
-/* ----- GENERAL STYLES ----- */
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #504f4f;
+}
+
+/* ----- INDEX STYLE ----- */
 .body_wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  margin: 7rem 0;
+  margin: 7rem auto;
+}
+.body_wrapper .potion_black {
+  opacity: 0;
+  position: absolute;
 }
 .body_wrapper .star {
   background-image: url(../images/tarot_the-star.jpg);
   position: relative;
 }
 .body_wrapper .star .container {
+  opacity: 1;
   transition: all 0.7s linear;
 }
 .body_wrapper .star:hover .container {
@@ -87,4 +152,231 @@ footer {
   opacity: 0;
 }
 
-/* ----- MEDIA QUIERIES ----- *//*# sourceMappingURL=main.css.map */
+/* ----- ABOUT STYLE ----- */
+.about_container {
+  display: grid;
+  place-items: center;
+}
+
+.about_pic {
+  height: 300px;
+  background-image: url(https://placekeanu.com/300/300*);
+  box-shadow: 0 0 40px 20px black inset, 0 0 30px 10px #111111;
+  width: 300px;
+  margin-bottom: 2rem;
+  border-radius: 150px;
+}
+.about_pic:hover {
+  animation: backgroundIMG 0.7s linear;
+}
+
+.about_container,
+.box1,
+.box2 {
+  margin: 2rem 0;
+}
+
+.box1 h2 {
+  text-align: center;
+}
+
+.box3 {
+  text-align: right;
+}
+
+.moon_ul {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  list-style-type: none;
+  gap: 1rem;
+}
+.moon_ul .fa-moon {
+  font-size: 1.5rem;
+}
+
+.animate_pic1,
+.animate_pic2,
+.animate_pic3 {
+  opacity: 0;
+  position: absolute;
+  width: 100px;
+  z-index: -1;
+}
+
+/* ----- PORTFOLIO STYLE -----*/
+.portfolio_container {
+  display: grid;
+  justify-content: center;
+}
+
+.rune {
+  opacity: 0;
+  width: 100px;
+  max-height: 200px;
+  position: absolute;
+}
+
+.perthro {
+  max-height: 150px;
+}
+
+.portal {
+  opacity: 0;
+  position: absolute;
+  width: 270px;
+}
+
+.book1 .portfolio_example,
+.book2 .portfolio_example,
+.book3 .portfolio_example,
+.book4 .portfolio_example {
+  background-image: url(https://picsum.photos/150/200);
+  border-radius: 5px;
+  width: 150px;
+  height: 200px;
+}
+.book1 .portfolio_text,
+.book2 .portfolio_text,
+.book3 .portfolio_text,
+.book4 .portfolio_text {
+  color: black;
+  width: 150px;
+  height: 200px;
+}
+.book1 .portfolio_text h3,
+.book2 .portfolio_text h3,
+.book3 .portfolio_text h3,
+.book4 .portfolio_text h3 {
+  font-size: 1rem;
+}
+
+/* ----- CONTACT STYLE ----- */
+.contact_form {
+  background-image: url(../images/Crystal-Ball.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 480px;
+  padding-top: 5rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  margin: 6rem 2rem;
+}
+.wrapper h1 {
+  font-family: "Cinzel Decorative", serif;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 10px 10px 10px rgb(30, 15, 44);
+}
+
+/* ----- MEDIA QUIERIES ----- */
+@media screen and (min-width: 768px) {
+  /* ----- INDEX ----- */
+  .body_wrapper {
+    place-items: center;
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    row-gap: 2rem;
+    grid-template-areas: "star blck rings" " . wands .";
+  }
+  .body_wrapper .star {
+    grid-area: star;
+  }
+  .body_wrapper .potion_black {
+    grid-area: blck;
+    position: relative;
+    opacity: 1;
+    width: 100px;
+  }
+  .body_wrapper .rings {
+    grid-area: rings;
+  }
+  .body_wrapper .wands {
+    grid-area: wands;
+  }
+  /* ----- ABOUT ----- */
+  .about_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 100px 1fr;
+    grid-template-areas: "pic box1" "box2 apic1" "apic3 apic3" "apic2 box3";
+  }
+  .about_container .about_pic {
+    grid-area: pic;
+  }
+  .about_container .box1 {
+    grid-area: box1;
+  }
+  .about_container .box2 {
+    grid-area: box2;
+  }
+  .about_container .box3 {
+    grid-area: box3;
+    text-align: right;
+  }
+  .about_container .animate_pic1 {
+    grid-area: apic1;
+    opacity: 0.8;
+    position: relative;
+    animation: wiggle 5s infinite;
+  }
+  .about_container .animate_pic2 {
+    grid-area: apic2;
+    opacity: 0.8;
+    position: relative;
+    animation: wiggle 5s infinite 2.5s;
+  }
+  .about_container .animate_pic3 {
+    grid-area: apic3;
+    opacity: 1;
+    position: relative;
+    transform: rotate(90deg);
+    height: 500px;
+  }
+  /* ----- PORTFOLIO ----- */
+  .portfolio_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 2rem;
+    grid-template-areas: "book1 rune book2" "book3 rune book4";
+  }
+  .portfolio_container .book1 {
+    grid-area: book1;
+  }
+  .portfolio_container .book2 {
+    grid-area: book2;
+  }
+  .portfolio_container .book3 {
+    grid-area: book3;
+  }
+  .portfolio_container .book4 {
+    grid-area: book4;
+  }
+  .portfolio_container .rune {
+    grid-area: rune;
+  }
+  .portfolio_container .portal {
+    opacity: 0.8;
+  }
+  .portfolio_container .book1:hover + .eiwaz {
+    opacity: 1;
+  }
+  .portfolio_container .book2:hover + .algiz {
+    opacity: 1;
+  }
+  .portfolio_container .book3:hover + .ansuz {
+    opacity: 1;
+  }
+  .portfolio_container .book4:hover + .perthro {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -7,71 +7,172 @@
 /* ----- IMPORTS ----- */
 @import "variables";
 @import "placeholders";
+@import "keyframes";
+@import "header";
 @import "body";
 @import "footer";
+@import "links";
 
-/* ----- GENERAL STYLES ----- */
+/* ----- INDEX STYLE ----- */
+@import "index-cards";
 
-.body_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
+/* ----- ABOUT STYLE ----- */
+@import "about-boxes";
+@import "about-pic";
 
-  margin: 7rem 0;
+/* ----- PORTFOLIO STYLE -----*/
+@import "portfolio-books";
 
-  .star {
-    background-image: url(../images/tarot_the-star.jpg);
-    @extend %tarotStyle;
-    position: relative;
+/* ----- CONTACT STYLE ----- */
+@import "contact-form";
 
-    .container {
-      @extend %overlayStyle;
-      transition: all 0.7s linear;
-    }
+.wrapper {
+  margin: 6rem 2rem;
 
-    &:hover {
-      .container {
-        opacity: 0;
-      }
-    }
+  h1 {
+    font-family: $cinzel;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 10px 10px 10px rgb(30, 15, 44);
   }
-
-    .rings {
-      background-image: url(../images/tarot_eight-of-rings.jpg);
-      @extend %tarotStyle;
-
-      .container {
-        @extend %overlayStyle;
-        transition: all 0.7s linear;
-      }
-
-      &:hover {
-        .container {
-          opacity: 0;
-        }
-      }
-    }
-
-    .wands {
-      background-image: url(../images/tarot_five-of-wands.PNG);
-      @extend %tarotStyle;
-
-      .container {
-        @extend %overlayStyle;
-        transition: all 0.7s linear;
-      }
-
-      &:hover {
-        .container {
-          opacity: 0;
-        }
-      }
-    }
-  }
+}
 
 /* ----- MEDIA QUIERIES ----- */
 
-@media screen and (min-width) {
+@media screen and (min-width: 768px) {
+  /* ----- INDEX ----- */
+  .body_wrapper {
+    place-items: center;
+
+    width: 70%;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    row-gap: 2rem;
+
+    grid-template-areas:
+      "star blck rings"
+      " . wands .";
+
+    .star {
+      grid-area: star;
+    }
+
+    .potion_black {
+      grid-area: blck;
+      position: relative;
+
+      opacity: 1;
+      width: 100px;
+    }
+
+    .rings {
+      grid-area: rings;
+    }
+
+    .wands {
+      grid-area: wands;
+    }
+  }
+
+  /* ----- ABOUT ----- */
+  .about_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 100px 1fr;
+
+    grid-template-areas:
+      "pic box1"
+      "box2 apic1"
+      "apic3 apic3"
+      "apic2 box3";
+
+    .about_pic {
+      grid-area: pic;
+    }
+
+    .box1 {
+      grid-area: box1;
+    }
+
+    .box2 {
+      grid-area: box2;
+    }
+
+    .box3 {
+      grid-area: box3;
+      text-align: right;
+    }
+
+    .animate_pic1 {
+      grid-area: apic1;
+      opacity: 0.8;
+      position: relative;
+
+      animation: wiggle 5s infinite;
+    }
+
+    .animate_pic2 {
+      grid-area: apic2;
+      opacity: 0.8;
+      position: relative;
+
+      animation: wiggle 5s infinite 2.5s;
+    }
+
+    .animate_pic3 {
+      grid-area: apic3;
+      opacity: 1;
+      position: relative;
+      transform: rotate(90deg);
+      height: 500px;
+    }
+  }
+
+  /* ----- PORTFOLIO ----- */
+  .portfolio_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 2rem;
+
+    grid-template-areas:
+      "book1 rune book2"
+      "book3 rune book4";
+
+    .book1 {
+      grid-area: book1;
+    }
+    .book2 {
+      grid-area: book2;
+    }
+    .book3 {
+      grid-area: book3;
+    }
+    .book4 {
+      grid-area: book4;
+    }
+    .rune {
+      grid-area: rune;
+    }
+    .portal {
+      opacity: .8;
+    }
+
+    .book1:hover + .eiwaz {
+      opacity: 1;
+    }
+
+    .book2:hover + .algiz {
+      opacity: 1;
+    }
+
+    .book3:hover + .ansuz {
+      opacity: 1;
+    }
+
+    .book4:hover + .perthro {
+      opacity: 1;
+    }
+  }
 }

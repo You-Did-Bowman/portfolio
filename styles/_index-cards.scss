@@ -1,0 +1,63 @@
+.body_wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  
+    margin: 7rem auto;
+
+    .potion_black {
+      opacity: 0;
+      position: absolute;
+    }
+  
+    .star {
+      background-image: url(../images/tarot_the-star.jpg);
+      @extend %tarotStyle;
+      position: relative;
+  
+      .container {
+        @extend %overlayStyle;
+        opacity: 1;
+        transition: all 0.7s linear;
+      }
+  
+      &:hover {
+        .container {
+          opacity: 0;
+        }
+      }
+    }
+  
+      .rings {
+        background-image: url(../images/tarot_eight-of-rings.jpg);
+        @extend %tarotStyle;
+  
+        .container {
+          @extend %overlayStyle;
+          transition: all 0.7s linear;
+        }
+  
+        &:hover {
+          .container {
+            opacity: 0;
+          }
+        }
+      }
+  
+      .wands {
+        background-image: url(../images/tarot_five-of-wands.PNG);
+        @extend %tarotStyle;
+  
+        .container {
+          @extend %overlayStyle;
+          transition: all 0.7s linear;
+        }
+  
+        &:hover {
+          .container {
+            opacity: 0;
+          }
+        }
+      }
+    }
