@@ -5,7 +5,9 @@
 
 .about_pic {
   height: 300px;
-  background-image: url(https://placekeanu.com/300/300*);
+  background-image: url(../images/Matze.jpg);
+  background-position: center;
+  background-size: contain;
   box-shadow: 0 0 40px 20px black inset, $genericBoxShadow;
 
   width: 300px;
@@ -13,7 +15,7 @@
   border-radius: 150px;
 
   &:hover {
-    animation: backgroundIMG .7s linear;
+    animation: backgroundIMG 0.7s linear;
   }
 }
 
@@ -24,7 +26,7 @@
 }
 
 .box1 {
-  h2 {
+   h2 {
     text-align: center;
   }
 }
@@ -34,13 +36,17 @@
 }
 
 .moon_ul {
-    display: flex;
-    align-items: center;
-    margin: 2rem;
-    list-style-type: none;
-    gap: 1rem;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+
+  list-style-type: none;
+
   
-    .fa-moon {
-      font-size: 1.5rem;
-    }
-  }
+}
+.fa-moon {
+  font-size: 1.5rem;
+  position: relative;
+  left: 220px;
+}
