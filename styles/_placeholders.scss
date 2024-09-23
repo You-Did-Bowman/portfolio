@@ -1,30 +1,45 @@
 %tarotStyle {
-    background-size: cover;
-    text-decoration: none;
-    width: 250px;
-    height: 435px;
-    box-shadow: $genericBoxShadow;
-    border-radius: 20px;
+  background-size: cover;
+  text-decoration: none;
+  width: 250px;
+  height: 435px;
+  box-shadow: $genericBoxShadow;
+  border-radius: 20px;
+}
+
+%overlayStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  top: 150px;
+  left: 75px;
+
+  background-color: #ffffffe0;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  transform: rotate(45deg);
+
+  p {
+    transform: rotate(-45deg);
+    color: $black;
+    font-size: 1.5rem;
   }
-  
-  %overlayStyle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    position: relative;
-    top: 150px;
-    left: 75px;
-  
-    background-color: #ffffffe0;
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
-    transform: rotate(45deg);
-  
-    p {
-      transform: rotate(-45deg);
-      color: $black;
-      font-size: 1.5rem;
-    }
-  }
+}
+
+%bookStyle {
+  background-image: url(../images/book.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 4rem 0;
+  width: 350px;
+  height: 250px;
+}

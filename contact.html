@@ -4,8 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- FONTAWSOME -->
+    <script
+      src="https://kit.fontawesome.com/d738257627.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alice&family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CUSTOM STYLE -->
-    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
 
     <title>Judith Bohmann - Contact</title>
   </head>
@@ -22,31 +36,23 @@
 
     <main class="wrapper">
       <h1>Contact</h1>
-      <div class="contact_form">
+        <form action="" method="get" class="contact_form">
+          <label for="uname">Name:</label>
+          <input type="text" name="username" id="uname" required />
 
-        
-        <form action="" method="get">
-          
-            <label for="uname">Name:</label>
-            <input type="text" name="username" id="uname" required>
-          
-            <label for="emailaddress">E-mail:</label>
-            <input type="email" name="email" id="emailaddress" required>
-         
-          
-          
-            <label for="bio">Message</label>
-            
-            <textarea placeholder="Leave me a message"
+          <label for="emailaddress">E-mail:</label>
+          <input type="email" name="email" id="emailaddress" required />
+
+          <label for="bio">Message</label>
+
+          <textarea
+            placeholder="Leave me a message"
             name="bio"
             id="bio"
             cols="20"
             rows="5"
-            ></textarea>
-          
+          ></textarea>
         </form>
-      </div>
-
     </main>
 
     <footer>

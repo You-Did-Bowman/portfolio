@@ -1,44 +1,46 @@
-  .portfolio_container {
-    display: grid;
-    justify-content: center;
+.portfolio_container {
+  display: grid;
+  justify-content: center;
+}
+
+.rune {
+  opacity: 0;
+  width: 100px;
+  max-height: 200px;
+  position: absolute;
+}
+
+.perthro {
+  max-height: 150px;
+}
+
+.portal {
+  opacity: 0;
+  position: absolute;
+  width: 270px;
+}
+
+.book1,
+.book2,
+.book3,
+.book4 {
+  @extend %bookStyle;
+
+  .portfolio_example {
+    background-image: url(https://picsum.photos/150/200);
+    border-radius: 5px;
+
+    width: 150px;
+    height: 200px;
   }
 
-  .book1,
-  .book2,
-  .book3,
-  .book4 {
-    background-image: url(../images/book.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  .portfolio_text {
+    color: black;
+    width: 150px;
+    height: 200px;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    margin: 4rem 0;
-    width: 350px;
-    height: 250px;
-
-    .portfolio_example {
-      background-image: url(https://picsum.photos/150/200);
-
-      width: 150px;
-      height: 200px;
-      border-radius: 5px;
-    }
-
-    .portfolio_text {
-      color: black;
-      width: 150px;
-      height: 200px;
-
-      h3 {
-        font-size: 1rem;
-      }
-    }
-
-    a:hover {
-      box-shadow: $genericBoxShadow;
+    h3 {
+      font-size: 1rem;
     }
   }
+}
