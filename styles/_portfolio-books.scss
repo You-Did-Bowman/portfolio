@@ -1,0 +1,44 @@
+  .portfolio_container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .book1,
+  .book2,
+  .book3,
+  .book4 {
+    background-image: url(../images/book.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 4rem 0;
+    width: 350px;
+    height: 250px;
+
+    .portfolio_example {
+      background-image: url(https://picsum.photos/150/200);
+
+      width: 150px;
+      height: 200px;
+      border-radius: 5px;
+    }
+
+    .portfolio_text {
+      color: black;
+      width: 150px;
+      height: 200px;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+
+    a:hover {
+      box-shadow: $genericBoxShadow;
+    }
+  }
