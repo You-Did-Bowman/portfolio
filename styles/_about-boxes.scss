@@ -4,6 +4,7 @@
   place-items: center;
   gap: 2rem;
 
+
   .box1 {
     text-align: center;
 
@@ -60,11 +61,15 @@
   .box3 {
     text-align: right;
     opacity: 0;
+    width: 80%;
   }
 
   .box4 {
+    margin: 1rem;
+    width: 600px;
+
     h2 {
-      margin-bottom: 1rem;
+      margin: 1rem;
       text-align: center;
     }
   }
