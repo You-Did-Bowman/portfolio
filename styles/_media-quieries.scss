@@ -1,0 +1,155 @@
+@media screen and (min-width: 768px) {
+    /* ----- INDEX ----- */
+    .body_wrapper {
+      place-items: center;
+  
+      width: 70%;
+  
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      row-gap: 2rem;
+  
+      grid-template-areas:
+        "star blck rings"
+        " . wands .";
+  
+      .star {
+        grid-area: star;
+      }
+  
+      .potion_black {
+        grid-area: blck;
+        position: relative;
+  
+        opacity: 1;
+        width: 100px;
+      }
+  
+      .rings {
+        grid-area: rings;
+      }
+  
+      .wands {
+        grid-area: wands;
+      }
+    }
+  
+    /* ----- ABOUT ----- */
+    .about_container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 300px 1fr;
+  
+      grid-template-areas:
+        "pic box1"
+        "box2 apic1"
+        "apic3 apic3"
+        "apic2 box3";
+  
+      .about_pic {
+        grid-area: pic;
+      }
+  
+      .box1 {
+        grid-area: box1;
+      }
+  
+      .box2 {
+        grid-area: box2;
+      }
+  
+      .box3 {
+        grid-area: box3;
+        text-align: right;
+        opacity: 0;
+      }
+  
+      .animate_pic1 {
+        grid-area: apic1;
+        opacity: 0.8;
+        position: relative;
+  
+        animation: wiggle 5s infinite;
+      }
+  
+      .animate_pic2 {
+        grid-area: apic2;
+        position: relative;
+  
+        animation: wiggle 5s infinite 2.5s;
+      }
+  
+      .animate_pic3 {
+        grid-area: apic3;
+        opacity: 1;
+        position: relative;
+        transform: rotate(90deg);
+        height: 500px;
+      }
+  
+      .animate_pic3:hover ~ .animate_pic2,
+      .animate_pic3:hover ~ .animate_pic2 + .box3 {
+        opacity: 1;
+      }
+    }
+  
+    /* ----- PORTFOLIO ----- */
+    .portfolio_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+      gap: 2rem;
+  
+      grid-template-areas:
+        "book1 rune book2"
+        "book3 rune book4";
+  
+      .book1 {
+        grid-area: book1;
+      }
+      .book2 {
+        grid-area: book2;
+      }
+      .book3 {
+        grid-area: book3;
+      }
+      .book4 {
+        grid-area: book4;
+      }
+      .rune {
+        grid-area: rune;
+      }
+      .portal {
+        opacity: 0.8;
+      }
+  
+      .book1:hover + .eiwaz {
+        opacity: 1;
+      }
+  
+      .book2:hover + .algiz {
+        opacity: 1;
+      }
+  
+      .book3:hover + .ansuz {
+        opacity: 1;
+      }
+  
+      .book4:hover + .perthro {
+        opacity: 1;
+      }
+    }
+  
+    /* ----- CONTACT ----- */
+  
+    .contact_container {
+      .big_circle, .small_circle {
+        opacity: 1;
+      }
+  
+      .circle3,.circle4, .circle6 {
+        animation: flash 1s ease infinite alternate;
+      }
+    }
+  }
+  

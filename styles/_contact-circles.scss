@@ -1,0 +1,54 @@
+.big_circle {
+    @include circleSytle (50px, 50px);
+    opacity: 0;
+}
+
+.small_circle {
+    @include circleSytle (25px, 25px);
+    opacity: 0;
+}
+
+.circle1 {
+    box-shadow: 2px -20px 30px 2.5px #1a7dce inset;
+    animation: pulse 1.5s infinite ease-in-out alternate;
+
+    top: 50px;
+    left: -30px;
+}
+
+.circle2 {
+    box-shadow: 2px -20px 30px 2.5px  #771ace inset;
+    animation: pulse 1s infinite ease-in-out alternate;
+
+    top: 250px;
+    left: 300px;
+}
+
+.circle3 {
+    box-shadow: 2px -20px 30px 2.5px #080a97 inset;
+
+    top: 75px;
+    left: 250px;
+}
+
+.circle4 {
+    box-shadow: 1px -10px 15px 1.2px #3f0897 inset;
+
+    top: -25px;
+    left: -200px;
+}
+
+.circle5 {
+    box-shadow: 1px -10px 15px 1.2px #089778 inset;
+
+    animation: pulse 2s infinite ease-in-out alternate;
+
+    left: 225px;
+}
+
+.circle6 {
+    box-shadow: 1px -10px 15px 1.2px #089778 inset;
+
+    top: px;
+    left: -200px;
+}
