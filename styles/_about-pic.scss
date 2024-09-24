@@ -1,11 +1,25 @@
-.animate_pic1,
-  .animate_pic2, 
-  .animate_pic3 {
+.animate_pic1 {
     opacity: 0;
     position: absolute;
-     width: 100px;
+     width: 200px;
      z-index: -1;
   }
+
+  .animate_pic2 {
+    width: 150px;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .animate_pic3 {
+    position: relative;
+      transform: rotate(90deg);
+      height: 400px;
+  }
+
+      .animate_pic3:hover ~ .animate_pic2 + .box3 {
+        opacity: 1;
+      }
 
 
 

@@ -1,46 +1,67 @@
 .about_container {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 300px 1fr;
   place-items: center;
-}
 
-.about_pic {
-  height: 300px;
-  background-image: url(https://placekeanu.com/300/300*);
-  box-shadow: 0 0 40px 20px black inset, $genericBoxShadow;
+  .about_pic {
+    height: 300px;
+    background-image: url(../images/Matze.jpg);
+    background-position: center;
+    background-size: contain;
+    box-shadow: 0 0 40px 20px black inset, $genericBoxShadow;
 
-  width: 300px;
-  margin-bottom: 2rem;
-  border-radius: 150px;
+    width: 300px;
+    margin-bottom: 2rem;
+    border-radius: 150px;
 
-  &:hover {
-    animation: backgroundIMG .7s linear;
+    &:hover {
+      animation: backgroundIMG 0.7s linear;
+    }
+  }
+
+  .box1 {
+    width: 400px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .moon_ul {
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      list-style-type: none;
+    }
+
+    .fa-moon {
+      font-size: 1.5rem;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .box2 {
+    .skill_potions {
+      width: 400px;
+      display: flex;
+
+      img {
+        width: 100px;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .box3 {
+    text-align: right;
+    opacity: 0;
   }
 }
 
 .about_container,
 .box1,
 .box2 {
-  margin: 2rem 0;
+  margin: 2rem auto;
 }
-
-.box1 {
-  h2 {
-    text-align: center;
-  }
-}
-
-.box3 {
-  text-align: right;
-}
-
-.moon_ul {
-    display: flex;
-    align-items: center;
-    margin: 2rem;
-    list-style-type: none;
-    gap: 1rem;
-  
-    .fa-moon {
-      font-size: 1.5rem;
-    }
-  }

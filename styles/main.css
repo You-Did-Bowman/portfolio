@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* ----- IMPORTS ----- */
+/* ----- MAIN IMPORTS ----- */
 /* Fontsa */
 /* Colors */
 .body_wrapper .wands, .body_wrapper .rings, .body_wrapper .star {
@@ -53,7 +53,9 @@
 
 @keyframes backgroundIMG {
   100% {
-    background-image: url(../images/illustrations_all.jpg);
+    background-image: url(../images/potion_green.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 @keyframes wiggle {
@@ -65,6 +67,136 @@
   }
   2%, 4%, 6%, 8% {
     transform: translateX(10px) rotate(-15deg);
+  }
+}
+@keyframes flash {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@media screen and (min-width: 768px) {
+  /* ----- INDEX ----- */
+  .body_wrapper {
+    place-items: center;
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    row-gap: 2rem;
+    grid-template-areas: "star blck rings" " . wands .";
+  }
+  .body_wrapper .star {
+    grid-area: star;
+  }
+  .body_wrapper .potion_black {
+    grid-area: blck;
+    position: relative;
+    opacity: 1;
+    width: 100px;
+  }
+  .body_wrapper .rings {
+    grid-area: rings;
+  }
+  .body_wrapper .wands {
+    grid-area: wands;
+  }
+  /* ----- ABOUT ----- */
+  .about_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 300px 1fr;
+    grid-template-areas: "pic box1" "box2 apic1" "apic3 apic3" "apic2 box3";
+  }
+  .about_container .about_pic {
+    grid-area: pic;
+  }
+  .about_container .box1 {
+    grid-area: box1;
+  }
+  .about_container .box2 {
+    grid-area: box2;
+  }
+  .about_container .box3 {
+    grid-area: box3;
+    text-align: right;
+    opacity: 0;
+  }
+  .about_container .animate_pic1 {
+    grid-area: apic1;
+    opacity: 0.8;
+    position: relative;
+    animation: wiggle 5s infinite;
+  }
+  .about_container .animate_pic2 {
+    grid-area: apic2;
+    position: relative;
+    animation: wiggle 5s infinite 2.5s;
+  }
+  .about_container .animate_pic3 {
+    grid-area: apic3;
+    opacity: 1;
+    position: relative;
+    transform: rotate(90deg);
+    height: 500px;
+  }
+  .about_container .animate_pic3:hover ~ .animate_pic2,
+  .about_container .animate_pic3:hover ~ .animate_pic2 + .box3 {
+    opacity: 1;
+  }
+  /* ----- PORTFOLIO ----- */
+  .portfolio_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 2rem;
+    grid-template-areas: "book1 rune book2" "book3 rune book4";
+  }
+  .portfolio_container .book1 {
+    grid-area: book1;
+  }
+  .portfolio_container .book2 {
+    grid-area: book2;
+  }
+  .portfolio_container .book3 {
+    grid-area: book3;
+  }
+  .portfolio_container .book4 {
+    grid-area: book4;
+  }
+  .portfolio_container .rune {
+    grid-area: rune;
+  }
+  .portfolio_container .portal {
+    opacity: 0.8;
+  }
+  .portfolio_container .book1:hover + .eiwaz {
+    opacity: 1;
+  }
+  .portfolio_container .book2:hover + .algiz {
+    opacity: 1;
+  }
+  .portfolio_container .book3:hover + .ansuz {
+    opacity: 1;
+  }
+  .portfolio_container .book4:hover + .perthro {
+    opacity: 1;
+  }
+  /* ----- CONTACT ----- */
+  .contact_container .big_circle, .contact_container .small_circle {
+    opacity: 1;
+  }
+  .contact_container .circle3, .contact_container .circle4, .contact_container .circle6 {
+    animation: flash 1s ease infinite alternate;
   }
 }
 header {
@@ -85,7 +217,7 @@ header ul {
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4666666667), black), url(../images/BG-planks.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4588235294), black), url(../images/BG-planks.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: white;
@@ -155,53 +287,82 @@ a:visited {
 /* ----- ABOUT STYLE ----- */
 .about_container {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 300px 1fr;
   place-items: center;
 }
-
-.about_pic {
+.about_container .about_pic {
   height: 300px;
-  background-image: url(https://placekeanu.com/300/300*);
+  background-image: url(../images/Matze.jpg);
+  background-position: center;
+  background-size: contain;
   box-shadow: 0 0 40px 20px black inset, 0 0 30px 10px #111111;
   width: 300px;
   margin-bottom: 2rem;
   border-radius: 150px;
 }
-.about_pic:hover {
+.about_container .about_pic:hover {
   animation: backgroundIMG 0.7s linear;
+}
+.about_container .box1 {
+  width: 400px;
+  text-align: center;
+}
+.about_container .box1 h2 {
+  margin-bottom: 1rem;
+}
+.about_container .box1 .moon_ul {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+.about_container .box1 .fa-moon {
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.about_container .box2 .skill_potions {
+  width: 400px;
+  display: flex;
+}
+.about_container .box2 .skill_potions img {
+  width: 100px;
+  margin: 0 1rem;
+}
+.about_container .box3 {
+  text-align: right;
+  opacity: 0;
 }
 
 .about_container,
 .box1,
 .box2 {
-  margin: 2rem 0;
+  margin: 2rem auto;
 }
 
-.box1 h2 {
-  text-align: center;
-}
-
-.box3 {
-  text-align: right;
-}
-
-.moon_ul {
-  display: flex;
-  align-items: center;
-  margin: 2rem;
-  list-style-type: none;
-  gap: 1rem;
-}
-.moon_ul .fa-moon {
-  font-size: 1.5rem;
-}
-
-.animate_pic1,
-.animate_pic2,
-.animate_pic3 {
+.animate_pic1 {
   opacity: 0;
   position: absolute;
-  width: 100px;
+  width: 200px;
   z-index: -1;
+}
+
+.animate_pic2 {
+  width: 150px;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.animate_pic3 {
+  position: relative;
+  transform: rotate(90deg);
+  height: 400px;
+}
+
+.animate_pic3:hover ~ .animate_pic2 + .box3 {
+  opacity: 1;
 }
 
 /* ----- PORTFOLIO STYLE -----*/
@@ -252,18 +413,86 @@ a:visited {
 }
 
 /* ----- CONTACT STYLE ----- */
-.contact_form {
+.contact {
+  height: 100vh;
+}
+.contact .contact_container {
   background-image: url(../images/Crystal-Ball.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 350px;
   height: 480px;
-  padding-top: 5rem;
-  margin: 2rem auto;
+  margin: 0 auto;
+}
+.contact .contact_container .contact_form {
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  position: relative;
+}
+.contact .contact_container .contact_form button {
+  margin-top: 1rem;
+}
+
+.big_circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: whiteSmoke;
+  position: relative;
+  opacity: 0;
+}
+
+.small_circle {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: whiteSmoke;
+  position: relative;
+  opacity: 0;
+}
+
+.circle1 {
+  box-shadow: 2px -20px 30px 2.5px #1a7dce inset;
+  animation: pulse 1.5s infinite ease-in-out alternate;
+  top: 50px;
+  left: -30px;
+}
+
+.circle2 {
+  box-shadow: 2px -20px 30px 2.5px #771ace inset;
+  animation: pulse 1s infinite ease-in-out alternate;
+  top: 250px;
+  left: 300px;
+}
+
+.circle3 {
+  box-shadow: 2px -20px 30px 2.5px #080a97 inset;
+  top: 75px;
+  left: 250px;
+}
+
+.circle4 {
+  box-shadow: 1px -10px 15px 1.2px #3f0897 inset;
+  top: -25px;
+  left: -200px;
+}
+
+.circle5 {
+  box-shadow: 1px -10px 15px 1.2px #089778 inset;
+  animation: pulse 2s infinite ease-in-out alternate;
+  left: 225px;
+}
+
+.circle6 {
+  box-shadow: 1px -10px 15px 1.2px #089778 inset;
+  top: px;
+  left: -200px;
 }
 
 .wrapper {
@@ -274,109 +503,4 @@ a:visited {
   text-align: center;
   font-size: 4rem;
   text-shadow: 10px 10px 10px rgb(30, 15, 44);
-}
-
-/* ----- MEDIA QUIERIES ----- */
-@media screen and (min-width: 768px) {
-  /* ----- INDEX ----- */
-  .body_wrapper {
-    place-items: center;
-    width: 70%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0;
-    row-gap: 2rem;
-    grid-template-areas: "star blck rings" " . wands .";
-  }
-  .body_wrapper .star {
-    grid-area: star;
-  }
-  .body_wrapper .potion_black {
-    grid-area: blck;
-    position: relative;
-    opacity: 1;
-    width: 100px;
-  }
-  .body_wrapper .rings {
-    grid-area: rings;
-  }
-  .body_wrapper .wands {
-    grid-area: wands;
-  }
-  /* ----- ABOUT ----- */
-  .about_container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 100px 1fr;
-    grid-template-areas: "pic box1" "box2 apic1" "apic3 apic3" "apic2 box3";
-  }
-  .about_container .about_pic {
-    grid-area: pic;
-  }
-  .about_container .box1 {
-    grid-area: box1;
-  }
-  .about_container .box2 {
-    grid-area: box2;
-  }
-  .about_container .box3 {
-    grid-area: box3;
-    text-align: right;
-  }
-  .about_container .animate_pic1 {
-    grid-area: apic1;
-    opacity: 0.8;
-    position: relative;
-    animation: wiggle 5s infinite;
-  }
-  .about_container .animate_pic2 {
-    grid-area: apic2;
-    opacity: 0.8;
-    position: relative;
-    animation: wiggle 5s infinite 2.5s;
-  }
-  .about_container .animate_pic3 {
-    grid-area: apic3;
-    opacity: 1;
-    position: relative;
-    transform: rotate(90deg);
-    height: 500px;
-  }
-  /* ----- PORTFOLIO ----- */
-  .portfolio_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-    gap: 2rem;
-    grid-template-areas: "book1 rune book2" "book3 rune book4";
-  }
-  .portfolio_container .book1 {
-    grid-area: book1;
-  }
-  .portfolio_container .book2 {
-    grid-area: book2;
-  }
-  .portfolio_container .book3 {
-    grid-area: book3;
-  }
-  .portfolio_container .book4 {
-    grid-area: book4;
-  }
-  .portfolio_container .rune {
-    grid-area: rune;
-  }
-  .portfolio_container .portal {
-    opacity: 0.8;
-  }
-  .portfolio_container .book1:hover + .eiwaz {
-    opacity: 1;
-  }
-  .portfolio_container .book2:hover + .algiz {
-    opacity: 1;
-  }
-  .portfolio_container .book3:hover + .ansuz {
-    opacity: 1;
-  }
-  .portfolio_container .book4:hover + .perthro {
-    opacity: 1;
-  }
 }/*# sourceMappingURL=main.css.map */
