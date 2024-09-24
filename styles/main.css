@@ -85,7 +85,7 @@
     transform: scale(1.2);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 780px) {
   /* ----- INDEX ----- */
   .body_wrapper {
     place-items: center;
@@ -114,8 +114,7 @@
   /* ----- ABOUT ----- */
   .about_container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 300px 1fr;
-    grid-template-areas: "pic box1" "box2 apic1" "apic3 apic3" "apic2 box3";
+    grid-template-areas: "pic box1" "box2 box2_text" "box4 box4" "apic3 apic3" "apic2 box3";
   }
   .about_container .about_pic {
     grid-area: pic;
@@ -126,16 +125,19 @@
   .about_container .box2 {
     grid-area: box2;
   }
+  .about_container .box2_text {
+    grid-area: box2_text;
+    text-align: right;
+  }
   .about_container .box3 {
     grid-area: box3;
     text-align: right;
     opacity: 0;
   }
-  .about_container .animate_pic1 {
-    grid-area: apic1;
-    opacity: 0.8;
-    position: relative;
-    animation: wiggle 5s infinite;
+  .about_container .box4 {
+    border: 2px solid green;
+    grid-area: box4;
+    text-align: left;
   }
   .about_container .animate_pic2 {
     grid-area: apic2;
@@ -208,6 +210,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 header ul {
   display: flex;
@@ -287,8 +290,9 @@ a:visited {
 /* ----- ABOUT STYLE ----- */
 .about_container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 300px 1fr;
+  grid-template-rows: 1fr 1fr 1fr 300px;
   place-items: center;
+  gap: 2rem;
 }
 .about_container .about_pic {
   height: 300px;
@@ -330,9 +334,27 @@ a:visited {
   width: 100px;
   margin: 0 1rem;
 }
+.about_container .box2_text {
+  display: flex;
+  width: 300px;
+}
+.about_container .box2_text .tech_skills {
+  text-align: left;
+}
+.about_container .box2_text ul {
+  margin-top: 1rem;
+  list-style-type: none;
+}
+.about_container .box2_text ul li {
+  margin: 1rem 0;
+}
 .about_container .box3 {
   text-align: right;
   opacity: 0;
+}
+.about_container .box4 h2 {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .about_container,
