@@ -2,14 +2,11 @@
   height: 100vh;
 
   .contact_container {
-    background-image: url(../images/Crystal-Ball.png);
+    background: url(../images/Crystal-Ball.png) no-repeat center;
     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 
     width: 350px;
     height: 480px;
-
     margin: 0 auto;
 
     .contact_form {

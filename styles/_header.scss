@@ -1,18 +1,20 @@
 header {
-    background: #1a1919;
-    height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  background: #1a1919;
+  height: 3rem;
+  width: 100%;
+
+  top: 0;
+  z-index: 3;
+
+  ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top:0;
-    width: 100%;
-    z-index: 3;
-  
-    ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-    }
+    gap: 4rem;
   }
+}

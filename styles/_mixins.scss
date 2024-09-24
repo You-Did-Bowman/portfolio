@@ -1,8 +1,8 @@
-@mixin circleSytle ($width, $height) {
-    display: inline-block;
-        width: $width;
-        height: $height;
-        border-radius: 50%;
-        background: whiteSmoke;
-        position: relative;
+@mixin circleSytle($width, $height) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background: whiteSmoke;
+  position: relative;
 }
