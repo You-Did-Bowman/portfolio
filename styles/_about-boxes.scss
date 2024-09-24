@@ -4,24 +4,7 @@
   place-items: center;
   gap: 2rem;
 
-  .about_pic {
-    height: 300px;
-    background-image: url(../images/Matze.jpg);
-    background-position: center;
-    background-size: contain;
-    box-shadow: 0 0 40px 20px black inset, $genericBoxShadow;
-
-    width: 300px;
-    margin-bottom: 2rem;
-    border-radius: 150px;
-
-    &:hover {
-      animation: backgroundIMG 0.7s linear;
-    }
-  }
-
   .box1 {
-    width: 400px;
     text-align: center;
 
     h2 {
@@ -32,20 +15,18 @@
       width: 400px;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 1rem;
+      margin: 1rem;
       list-style-type: none;
     }
 
     .fa-moon {
       font-size: 1.5rem;
       position: relative;
-      margin-bottom: 1rem;
     }
   }
 
   .box2 {
     .skill_potions {
-      width: 400px;
       display: flex;
 
       img {
@@ -53,25 +34,28 @@
         margin: 0 1rem;
       }
     }
-
   }
-    .box2_text {
-      display: flex;
-      width: 300px;
+  .box2_text {
+    display: flex;
+    width: 400px;
 
-      .tech_skills {
-        text-align: left;
-      }
+    .tech_skills {
+      text-align: left;
+    }
 
-      ul {
-        margin-top: 1rem;
-        list-style-type: none;
+    .education {
+      text-align: right;
+    }
 
-        li {
-          margin: 1rem 0;
-        }
+    ul {
+      margin-top: 1rem;
+      list-style-type: none;
+
+      li {
+        margin: 1rem 0;
       }
     }
+  }
 
   .box3 {
     text-align: right;
@@ -84,10 +68,4 @@
       text-align: center;
     }
   }
-}
-
-.about_container,
-.box1,
-.box2 {
-  margin: 2rem auto;
 }
