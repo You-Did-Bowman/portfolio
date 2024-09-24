@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 780px) {
     /* ----- INDEX ----- */
     .body_wrapper {
       place-items: center;
@@ -38,11 +38,10 @@
     /* ----- ABOUT ----- */
     .about_container {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 300px 1fr;
-  
       grid-template-areas:
         "pic box1"
-        "box2 apic1"
+        "box2 box2_text"
+        "box4 box4"
         "apic3 apic3"
         "apic2 box3";
   
@@ -57,19 +56,22 @@
       .box2 {
         grid-area: box2;
       }
+
+      .box2_text {
+        grid-area: box2_text;
+        text-align: right;
+      }
   
       .box3 {
         grid-area: box3;
         text-align: right;
         opacity: 0;
       }
-  
-      .animate_pic1 {
-        grid-area: apic1;
-        opacity: 0.8;
-        position: relative;
-  
-        animation: wiggle 5s infinite;
+
+      .box4 {
+        border: 2px solid green;
+        grid-area: box4;
+        text-align: left;
       }
   
       .animate_pic2 {

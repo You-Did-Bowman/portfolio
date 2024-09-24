@@ -1,7 +1,8 @@
 .about_container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 300px 1fr;
+  grid-template-rows: 1fr 1fr 1fr 300px;
   place-items: center;
+  gap: 2rem;
 
   .about_pic {
     height: 300px;
@@ -52,11 +53,36 @@
         margin: 0 1rem;
       }
     }
+
   }
+    .box2_text {
+      display: flex;
+      width: 300px;
+
+      .tech_skills {
+        text-align: left;
+      }
+
+      ul {
+        margin-top: 1rem;
+        list-style-type: none;
+
+        li {
+          margin: 1rem 0;
+        }
+      }
+    }
 
   .box3 {
     text-align: right;
     opacity: 0;
+  }
+
+  .box4 {
+    h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
   }
 }
 
