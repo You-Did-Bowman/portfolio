@@ -5,6 +5,11 @@
 
   margin: 6rem auto;
 
+  h1 {
+    font-family: $cinzel;
+    text-align: center;
+  }
+
   .star {
     background-image: url(../images/tarot_the-star.jpg);
     @extend %tarotStyle;

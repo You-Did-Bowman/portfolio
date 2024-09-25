@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* ----- MAIN IMPORTS ----- */
+/* ----- GENERAL IMPORTS ----- */
 /* Fonts */
 /* Colors */
 /* Style */
@@ -245,6 +245,10 @@ a:visited {
   place-items: center;
   gap: 4rem;
   margin: 6rem auto;
+}
+.body_wrapper h1 {
+  font-family: "Cinzel Decorative", serif;
+  text-align: center;
 }
 .body_wrapper .star {
   background-image: url(../images/tarot_the-star.jpg);
