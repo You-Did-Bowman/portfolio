@@ -3,19 +3,56 @@
   place-items: center;
   gap: 2rem;
 
-  .box1 { 
-text-align: center;
-margin-top: 2rem;
+  .box1 {
+    text-align: center;
 
-.moon_ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    h2 {
+      margin-bottom: 1rem;
+    }
 
-  margin-top: 2rem;
-  width: 400px;
-  list-style-type: none;
-}
+    .moon_ul {
+      display: flex;
+      justify-content: space-between;
 
+      width: 400px;
+      margin-top: 2rem;
+      list-style-type: none;
+    }
+
+    .fa-moon {
+      font-size: 1.5rem;
+      position: relative;
+    }
+  }
+  .box2_text {
+
+    .education {
+      text-align: right;
+    }
+
+    ul {
+      margin-top: 2rem;
+      list-style-type: none;
+
+      li {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .box3 {
+    text-align: right;
+    opacity: 0;
+    width: 80%;
+  }
+
+  .box4 {
+    margin: 1rem;
+    width: 400px;
+
+    h2 {
+      margin: 1rem;
+      text-align: center;
+    }
   }
 }

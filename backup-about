@@ -1,6 +1,5 @@
 .about_container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 300px;
   place-items: center;
   gap: 2rem;
 
@@ -12,10 +11,11 @@
     }
 
     .moon_ul {
-      width: 400px;
       display: flex;
       justify-content: space-between;
-      margin: 1rem;
+
+      width: 400px;
+      margin-top: 2rem;
       list-style-type: none;
     }
 
@@ -24,31 +24,14 @@
       position: relative;
     }
   }
-
-  .box2 {
-    .skill_potions {
-      display: flex;
-
-      img {
-        width: 100px;
-        margin: 0 1rem;
-      }
-    }
-  }
   .box2_text {
-    display: flex;
-    width: 400px;
-
-    .tech_skills {
-      text-align: left;
-    }
 
     .education {
       text-align: right;
     }
 
     ul {
-      margin-top: 1rem;
+      margin-top: 2rem;
       list-style-type: none;
 
       li {

@@ -50,17 +50,27 @@
 
     .box2_text {
       grid-area: box2_text;
+
+      display: flex;
+      justify-content: space-between;
+
+      width: 600px;
     }
 
     .box3 {
       grid-area: box3;
       text-align: right;
       opacity: 0;
+
+      width: 600px;
     }
 
     .box4 {
+      border: 2px solid green;
+
       grid-area: box4;
-      text-align: left;
+
+      width: 800px;
     }
 
     .animate_pic2 {

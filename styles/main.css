@@ -123,15 +123,20 @@
   }
   .about_container .box2_text {
     grid-area: box2_text;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
   }
   .about_container .box3 {
     grid-area: box3;
     text-align: right;
     opacity: 0;
+    width: 600px;
   }
   .about_container .box4 {
+    border: 2px solid green;
     grid-area: box4;
-    text-align: left;
+    width: 800px;
   }
   .about_container .animate_pic2 {
     grid-area: apic2;
@@ -289,15 +294,43 @@ a:visited {
 }
 .about_container .box1 {
   text-align: center;
-  margin-top: 2rem;
+}
+.about_container .box1 h2 {
+  margin-bottom: 1rem;
 }
 .about_container .box1 .moon_ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
   width: 400px;
+  margin-top: 2rem;
   list-style-type: none;
+}
+.about_container .box1 .fa-moon {
+  font-size: 1.5rem;
+  position: relative;
+}
+.about_container .box2_text .education {
+  text-align: right;
+}
+.about_container .box2_text ul {
+  margin-top: 2rem;
+  list-style-type: none;
+}
+.about_container .box2_text ul li {
+  margin: 1rem 0;
+}
+.about_container .box3 {
+  text-align: right;
+  opacity: 0;
+  width: 80%;
+}
+.about_container .box4 {
+  margin: 1rem;
+  width: 400px;
+}
+.about_container .box4 h2 {
+  margin: 1rem;
+  text-align: center;
 }
 
 .about_pic {
@@ -312,6 +345,13 @@ a:visited {
 }
 .about_pic:hover {
   animation: backgroundIMG 1s ease-in-out 0.3s;
+}
+
+.skill_potions {
+  margin-top: 2rem;
+}
+.skill_potions img {
+  width: 125px;
 }
 
 /* ----- PORTFOLIO STYLE -----*/
