@@ -21,3 +21,19 @@
     width: 125px;
   }
 }
+
+.animate_pic2 {
+  height: 400px;
+  opacity: 0;
+}
+
+.animate_pic3 {
+  margin: -8rem 0;
+  height: 400px;
+  transform: rotate(90deg);
+}
+
+.animate_pic3:hover ~ .box4,
+.animate_pic3:hover ~ .box4 + .animate_pic2 {
+  opacity: 1;
+}

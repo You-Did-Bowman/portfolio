@@ -128,7 +128,6 @@
     width: 600px;
   }
   .about_container .box3 {
-    border: 2px solid green;
     grid-area: box4;
     width: 800px;
   }
@@ -326,6 +325,10 @@ a:visited {
   margin: 1rem;
   text-align: center;
 }
+.about_container .box4 {
+  text-align: right;
+  opacity: 0;
+}
 
 .about_pic {
   background-image: url(../images/Matze.jpg);
@@ -346,6 +349,22 @@ a:visited {
 }
 .skill_potions img {
   width: 125px;
+}
+
+.animate_pic2 {
+  height: 400px;
+  opacity: 0;
+}
+
+.animate_pic3 {
+  margin: -8rem 0;
+  height: 400px;
+  transform: rotate(90deg);
+}
+
+.animate_pic3:hover ~ .box4,
+.animate_pic3:hover ~ .box4 + .animate_pic2 {
+  opacity: 1;
 }
 
 /* ----- PORTFOLIO STYLE -----*/

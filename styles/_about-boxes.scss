@@ -25,7 +25,6 @@
     }
   }
   .box2_text {
-
     .education {
       text-align: right;
     }
@@ -47,5 +46,10 @@
       margin: 1rem;
       text-align: center;
     }
+  }
+
+  .box4 {
+    text-align: right;
+    opacity: 0;
   }
 }
