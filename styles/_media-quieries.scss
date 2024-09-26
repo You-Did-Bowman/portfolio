@@ -25,68 +25,7 @@
     }
   }
 
-  /* ----- ABOUT ----- */
-  .about_container {
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    grid-template-areas:
-      "pic box1"
-      "box2 box2_text"
-      "box4 box4"
-      "apic3 apic3"
-      "apic2 box3";
-
-    .about_pic {
-      grid-area: pic;
-    }
-
-    .box1 {
-      grid-area: box1;
-    }
-
-    .box2 {
-      grid-area: box2;
-    }
-
-    .box2_text {
-      grid-area: box2_text;
-
-      display: flex;
-      justify-content: space-between;
-
-      width: 600px;
-    }
-
-    .box3 {
-      grid-area: box4;
-      width: 800px;
-    }
-
-    .box4 {
-      grid-area: box3;
-      text-align: right;
-      opacity: 0;
-      width: 600px;
-    }
-
-    .animate_pic2 {
-      grid-area: apic2;
-      position: relative;
-
-      animation: wiggle 5s infinite;
-    }
-
-    .animate_pic3 {
-      grid-area: apic3;
-      opacity: 1;
-      height: 600px;
-    }
-
-    .animate_pic3:hover ~ .animate_pic2,
-    .animate_pic3:hover ~ .animate_pic2 + .box3 {
-      opacity: 1;
-    }
-  }
+ 
 
   /* ----- PORTFOLIO ----- */
   .portfolio_container {
@@ -147,6 +86,72 @@
     .circle4,
     .circle6 {
       animation: flash 1s ease infinite alternate;
+    }
+  }
+}
+
+@media screen and (min-width: 880px) {
+   /* ----- ABOUT ----- */
+  
+  .about_container {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-areas:
+      "pic box1"
+      "box2 box2_text"
+      "box4 box4"
+      "apic3 apic3"
+      "apic2 box3";
+
+    .about_pic {
+      grid-area: pic;
+    }
+
+    .box1 {
+      grid-area: box1;
+    }
+
+    .box2 {
+      grid-area: box2;
+    }
+
+    .box2_text {
+      grid-area: box2_text;
+
+      display: flex;
+      justify-content: space-between;
+
+      width: 600px;
+    }
+
+    .box3 {
+      grid-area: box4;
+      width: 800px;
+    }
+
+    .box4 {
+      grid-area: box3;
+      text-align: right;
+      opacity: 0;
+      width: 600px;
+    }
+
+    .animate_pic2 {
+      grid-area: apic2;
+      position: relative;
+
+      animation: wiggle 5s infinite;
+    }
+
+    .animate_pic3 {
+      grid-area: apic3;
+      opacity: 1;
+      height: 600px;
+    }
+
+    .animate_pic3:hover ~ .animate_pic2,
+    .animate_pic3:hover ~ .animate_pic2 + .box3 {
+      opacity: 1;
     }
   }
 }
