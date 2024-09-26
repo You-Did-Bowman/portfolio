@@ -128,15 +128,15 @@
     width: 600px;
   }
   .about_container .box3 {
+    border: 2px solid green;
+    grid-area: box4;
+    width: 800px;
+  }
+  .about_container .box4 {
     grid-area: box3;
     text-align: right;
     opacity: 0;
     width: 600px;
-  }
-  .about_container .box4 {
-    border: 2px solid green;
-    grid-area: box4;
-    width: 800px;
   }
   .about_container .animate_pic2 {
     grid-area: apic2;
@@ -320,15 +320,9 @@ a:visited {
   margin: 1rem 0;
 }
 .about_container .box3 {
-  text-align: right;
-  opacity: 0;
-  width: 80%;
-}
-.about_container .box4 {
   margin: 1rem;
-  width: 400px;
 }
-.about_container .box4 h2 {
+.about_container .box3 h2 {
   margin: 1rem;
   text-align: center;
 }

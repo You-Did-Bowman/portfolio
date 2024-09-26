@@ -58,19 +58,19 @@
     }
 
     .box3 {
-      grid-area: box3;
-      text-align: right;
-      opacity: 0;
-
-      width: 600px;
-    }
-
-    .box4 {
       border: 2px solid green;
 
       grid-area: box4;
 
       width: 800px;
+    }
+
+    .box4 {
+      grid-area: box3;
+      text-align: right;
+      opacity: 0;
+
+      width: 600px;
     }
 
     .animate_pic2 {
