@@ -28,6 +28,7 @@
   /* ----- ABOUT ----- */
   .about_container {
     grid-template-columns: 1fr 1fr;
+    place-items: center;
     grid-template-areas:
       "pic box1"
       "box2 box2_text"

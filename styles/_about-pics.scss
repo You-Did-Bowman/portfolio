@@ -1,0 +1,15 @@
+.about_pic {
+  background-image: url(../images/Matze.jpg);
+  background-position: center;
+  background-size: contain;
+  border-radius: 200px;
+  box-shadow: 0 0 10px 10px #0e0d0d, 0 0 10px 10px #0e0d0d inset;
+
+  width: 400px;
+  height: 400px;
+  margin-top: 2rem;
+
+  &:hover {
+    animation: backgroundIMG 1s ease-in-out 0.3s;
+  }
+}

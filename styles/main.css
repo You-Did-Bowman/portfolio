@@ -109,6 +109,7 @@
   /* ----- ABOUT ----- */
   .about_container {
     grid-template-columns: 1fr 1fr;
+    place-items: center;
     grid-template-areas: "pic box1" "box2 box2_text" "box4 box4" "apic3 apic3" "apic2 box3";
   }
   .about_container .about_pic {
@@ -283,92 +284,34 @@ a:visited {
 /* ----- ABOUT STYLE ----- */
 .about_container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 300px;
   place-items: center;
   gap: 2rem;
 }
 .about_container .box1 {
   text-align: center;
-}
-.about_container .box1 h2 {
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 .about_container .box1 .moon_ul {
-  width: 400px;
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
-  list-style-type: none;
-}
-.about_container .box1 .fa-moon {
-  font-size: 1.5rem;
-  position: relative;
-}
-.about_container .box2 .skill_potions {
-  display: flex;
-}
-.about_container .box2 .skill_potions img {
-  width: 100px;
-  margin: 0 1rem;
-}
-.about_container .box2_text {
-  display: flex;
+  align-items: center;
+  margin-top: 2rem;
   width: 400px;
-}
-.about_container .box2_text .tech_skills {
-  text-align: left;
-}
-.about_container .box2_text .education {
-  text-align: right;
-}
-.about_container .box2_text ul {
-  margin-top: 1rem;
   list-style-type: none;
-}
-.about_container .box2_text ul li {
-  margin: 1rem 0;
-}
-.about_container .box3 {
-  text-align: right;
-  opacity: 0;
-  width: 80%;
-}
-.about_container .box4 {
-  margin: 1rem;
-  width: 600px;
-}
-.about_container .box4 h2 {
-  margin: 1rem;
-  text-align: center;
 }
 
 .about_pic {
-  height: 300px;
-  background: url(../images/Matze.jpg) center;
+  background-image: url(../images/Matze.jpg);
+  background-position: center;
   background-size: contain;
-  box-shadow: 0 0 40px 20px black inset, 0 0 30px 10px #111111;
-  width: 300px;
-  border-radius: 150px;
+  border-radius: 200px;
+  box-shadow: 0 0 10px 10px #0e0d0d, 0 0 10px 10px #0e0d0d inset;
+  width: 400px;
+  height: 400px;
+  margin-top: 2rem;
 }
 .about_pic:hover {
-  animation: backgroundIMG 0.7s linear;
-}
-
-.animate_pic2 {
-  position: absolute;
-  width: 150px;
-  opacity: 0;
-  z-index: -1;
-}
-
-.animate_pic3 {
-  position: relative;
-  height: 400px;
-  transform: rotate(90deg);
-}
-
-.animate_pic3:hover ~ .animate_pic2 + .box3 {
-  opacity: 1;
+  animation: backgroundIMG 1s ease-in-out 0.3s;
 }
 
 /* ----- PORTFOLIO STYLE -----*/
