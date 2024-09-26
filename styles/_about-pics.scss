@@ -1,0 +1,39 @@
+.about_pic {
+  background-image: url(../images/Matze.jpg);
+  background-position: center;
+  background-size: contain;
+  border-radius: 200px;
+  box-shadow: 0 0 10px 10px #0e0d0d, 0 0 10px 10px #0e0d0d inset;
+
+  width: 400px;
+  height: 400px;
+  margin-top: 2rem;
+
+  &:hover {
+    animation: backgroundIMG 1s ease-in-out 0.3s;
+  }
+}
+
+.skill_potions {
+  margin-top: 2rem;
+
+  img {
+    width: 125px;
+  }
+}
+
+.animate_pic2 {
+  height: 400px;
+  opacity: 0;
+}
+
+.animate_pic3 {
+  margin: -8rem 0;
+  height: 400px;
+  transform: rotate(90deg);
+}
+
+.animate_pic3:hover ~ .box4,
+.animate_pic3:hover ~ .box4 + .animate_pic2 {
+  opacity: 1;
+}
